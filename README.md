@@ -1,6 +1,48 @@
 # Tic Tac Toe
 
-This is an implementation of the game tic tac toe within a Q-SYS plugin. It allows you to play against the computer, as well as choose your letter that you play with. Within a sesion, it will keep track of wins and losses on both sides.  The AI/computer operates in a simple manner. First, it checks to see if it can win, then it checks to see if it can block the player from winning, and lastly, if it can't do either, it will chose one of it's available moves.
+A Q-SYS plugin that provides momentary button controls with hold functionality and visual gauge feedback.
+
+## Features
+
+- Momentary buttons with configurable hold time
+- Visual gauge feedback that can be displayed behind transparent buttons
+- Support for both horizontal and vertical gauge orientations
+- Configurable button dimensions and colors
+- "Pressed" and "Held" LED outputs for logic control (with controllable pulse time)
+
+## Setup Instructions
+
+1. Add the plugin to your Q-SYS design
+2. Configure the setup parameters:
+   - Hold Time: Duration (in seconds) required for "Held" state
+   - Pulse Time: Duration of LED feedback pulses
+   - Button Width/Height: Must match actual UCI button dimensions
+   - Background Color: Main button background (#00000000 for transparent)
+   - Fill Color: Gauge fill color
+   - Stroke Color: Button border color (set to #00000000 for none)
+   - Is Vertical: Toggle between horizontal/vertical gauge orientation
+
+3. On your UCI:
+   - Place the plugin's graphic element where desired
+   - Overlay a button control on top of the graphic
+   - Configure the button with:
+     - All transparent colors
+     - If you want a stroke on the button, set it on the transparent button that is pressed, also add your text here
+     - Add any corner radius to both the button and the graphic
+
+## Usage
+
+- Short press: Triggers "Pressed" LED pulse
+- Long press: When held beyond Hold Time, triggers "Held" LED pulse
+- Use "Pressed" and "Held" pins to drive your control logic
+- Gauge feedback displays through transparent button overlay
+
+## Tips
+
+- Always match Button Width/Height values to actual UCI button size
+- Use "#00000000" for any transparent color values
+- Test hold timing to ensure proper user interaction
+
 
 ## PluginCompile
 
