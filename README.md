@@ -1,6 +1,8 @@
-# Advanced Press & Hold with Gauge Feedback
+# Advanced Press & Hold with Gauge Fill Feedback
 
 A Q-SYS plugin that provides momentary button controls with hold functionality and visual gauge feedback.
+
+![demo](./demo.gif)
 
 ## Features
 
